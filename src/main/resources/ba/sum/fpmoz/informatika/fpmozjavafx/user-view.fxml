@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="414.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.sum.fpmoz.informatika.fpmozjavafx.controller.UserController">
+    <children>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#introAdministration" prefHeight="26.0" prefWidth="130.0" text="Nazad" textFill="#cf0d0d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font></Button>
+      <GridPane layoutX="459.0" layoutY="85.0" prefHeight="278.0" prefWidth="258.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="56.2" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="425.0" minWidth="10.0" prefWidth="119.8" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefWidth="192.0" text="Ime" textFill="#b41b1b" />
+            <Label text="Prezime" textFill="#ae1919" GridPane.rowIndex="1" />
+            <Label text="E-mail" textFill="#b91717" GridPane.rowIndex="2" />
+            <TextField fx:id="ImeTxt" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: gray;" GridPane.columnIndex="1" />
+            <TextField fx:id="surnameTxt" style="-fx-background-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="mailTxt" style="-fx-background-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Password" textFill="#990f0f" GridPane.rowIndex="3" />
+            <TextField fx:id="lozTxt" style="-fx-background-color: gray;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tableViewUsers" layoutX="22.0" layoutY="85.0" onMouseClicked="#selectUser" prefHeight="215.0" prefWidth="420.0">
+        <columns>
+          <TableColumn fx:id="tableColumnID" prefWidth="29.20001184940338" text="ID" />
+            <TableColumn fx:id="tableColumnName" prefWidth="80.99999618530273" text="Ime" />
+          <TableColumn fx:id="tableColumnSur" prefWidth="99.0" text="Prezime" />
+            <TableColumn fx:id="tableColumnLoz" prefWidth="99.80000305175781" text="Lozinka" />
+            <TableColumn fx:id="tableColumnMail" prefWidth="109.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteBtn" disable="true" layoutX="324.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="26.0" prefWidth="174.0" text="Delete User" textFill="#ec1515">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary" />
+         </styleClass>
+      </Button>
+      <Button layoutX="279.0" layoutY="323.0" onAction="#saveUser" prefHeight="38.0" prefWidth="265.0" text="Spremi korisnika" textFill="#b10b0b">
+
+            </Button>
+    </children>
+</AnchorPane>
